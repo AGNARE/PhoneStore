@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">71dp</item>
+        <item name="android:layout_height">71dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="cornerRadius">200dp</item>
+    </style>
+
+    <style name="White.Button" parent="Base.Button">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+
+</resources>
