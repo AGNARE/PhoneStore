@@ -5,4 +5,12 @@
     <string name="view_all">view all</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ecommerce_nconcept">ecommerce\nconcept</string>
+    <string name="see_more">see more</string>
+    <string name="hot_sales">Hot sales</string>
+    <string name="search">Search</string>
+    <string name="books">Books</string>
+    <string name="health">Health</string>
+    <string name="computer">Computer</string>
+    <string name="todo">TODO</string>
 </resources>

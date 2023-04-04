@@ -57,7 +57,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingVertical="6dp">
+            android:paddingVertical="6dp"
+            tools:ignore="MissingConstraints">
 
             <ImageButton
                 android:id="@+id/buttonFirst"
@@ -73,7 +74,6 @@
                 android:layout_height="71dp"
                 android:layout_marginHorizontal="12dp"
                 android:background="@drawable/screen"
-                style="@style/White.Button"
                 android:src="@drawable/computer"/>
 
             <ImageButton
@@ -81,16 +81,15 @@
                 android:layout_width="71dp"
                 android:layout_height="71dp"
                 android:layout_marginHorizontal="12dp"
-                style="@style/White.Button"
                 android:src="@drawable/health"
-                android:background="@drawable/screen"/>
+                android:background="@drawable/screen"
+                android:contentDescription="@string/todo" />
 
             <ImageButton
                 android:id="@+id/buttonFourth"
                 android:layout_width="71dp"
                 android:layout_height="71dp"
                 android:layout_marginHorizontal="12dp"
-                style="@style/White.Button"
                 android:src="@drawable/book"
                 android:background="@drawable/screen"/>
 
@@ -118,7 +117,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Computer"
+                android:text="@string/computer"
                 android:textSize="12sp"
                 android:textColor="@color/textColor"
                 android:layout_marginHorizontal="25dp"/>
@@ -126,7 +125,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Health"
+                android:text="@string/health"
                 android:textSize="12sp"
                 android:textColor="@color/textColor"
                 android:layout_marginHorizontal="30dp"/>
@@ -134,7 +133,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Books"
+                android:text="@string/books"
                 android:textSize="12sp"
                 android:textColor="@color/textColor"
                 android:layout_marginHorizontal="30dp"/>
@@ -151,12 +150,13 @@
         android:layout_marginTop="32dp"
         android:drawableStart="@drawable/ic_search"
         android:drawablePadding="16dp"
-        android:hint="Search"
+        android:hint="@string/search"
         android:paddingStart="12dp"
         android:background="@drawable/editbackgraund"
         app:layout_constraintEnd_toStartOf="@id/qrCode"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/container"/>
+        app:layout_constraintTop_toBottomOf="@id/container"
+        android:autofillHints="" />
 
     <ImageButton
         android:id="@+id/qrCode"
@@ -167,13 +167,14 @@
         app:layout_constraintStart_toEndOf="@id/search"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="298dp"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/sales"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hot sales"
+        android:text="@string/hot_sales"
         android:textColor="@color/textColor"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -184,7 +185,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="see more"
+        android:text="@string/see_more"
         android:textColor="@color/orangeColor"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
