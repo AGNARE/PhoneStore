@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/imgFirst"
+        android:layout_width="187dp"
+        android:layout_height="168dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="21dp"/>
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:textSize="20sp"
+        android:text="price"
+        app:layout_constraintTop_toBottomOf="@id/imgFirst"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="3dp"/>
+
+    <TextView
+        android:id="@+id/tvInfoPhone"
+        android:layout_width="122dp"
+        android:layout_height="13dp"
+        android:textSize="10sp"
+        android:text="infoPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPrice"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="2dp"/>
+
+
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imgSecond"-->
+<!--        android:layout_width="187dp"-->
+<!--        android:layout_height="168dp"-->
+<!--        app:layout_constraintStart_toEndOf="@id/imgFirst"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginTop="21dp"-->
+<!--        android:layout_marginEnd="14dp"/>-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

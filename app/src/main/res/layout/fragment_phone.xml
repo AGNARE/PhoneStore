@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".PhoneFragment">
-
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <TextView
         android:id="@+id/groTextView"
         android:layout_width="wrap_content"
@@ -16,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="34dp"/>
+        android:layout_marginTop="20dp"/>
 
     <TextView
         android:id="@+id/category"
@@ -36,7 +38,6 @@
         android:layout_height="wrap_content"
         android:text="@string/view_all"
         android:textSize="15sp"
-
         android:textColor="@color/orangeColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/category"
@@ -45,7 +46,7 @@
         android:layout_marginStart="120dp"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/container"
+        android:id="@+id/containerL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/category"
@@ -57,7 +58,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingVertical="6dp">
+            android:paddingVertical="6dp"
+            tools:ignore="MissingConstraints">
 
             <ImageButton
                 android:id="@+id/buttonFirst"
@@ -156,18 +158,18 @@
         android:background="@drawable/editbackgraund"
         app:layout_constraintEnd_toStartOf="@id/qrCode"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/container"/>
+        app:layout_constraintTop_toBottomOf="@id/containerL"/>
 
     <ImageButton
         android:id="@+id/qrCode"
         android:layout_width="41dp"
         android:layout_height="41dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/screen"
         android:src="@drawable/ic_qr_code"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/search"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="298dp"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/containerL" />
 
     <TextView
         android:id="@+id/sales"
@@ -193,11 +195,108 @@
         android:layout_marginEnd="12dp"/>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="280dp"
+        android:id="@+id/cardView"
+        android:layout_width="384dp"
         android:layout_height="182dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sales"
         android:layout_marginTop="8dp"
-        android:background="@drawable/iphone"/>
+        android:background="@drawable/iphone">
+
+        <ImageView
+            android:id="@+id/imageReclam"
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/iphone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sales" />
+
+        <ImageButton
+            android:id="@+id/imageNew"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:background="@drawable/screen"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="23dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="36dp"
+            android:text="New"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="109dp"
+            android:layout_height="30dp"
+            android:text="Iphone12"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="68dp"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            android:text="Super.Mega.Rapido."
+            android:layout_marginTop="103dp"
+            android:layout_marginStart="32dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="98dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="136dp"
+            android:layout_marginStart="32dp"
+            android:text="Buy now!"
+            android:textSize="9sp"
+            android:textColor="@color/black"
+            android:background="@drawable/editbackgraund"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/bestSeller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        android:textSize="25sp"
+        android:textColor="@color/textColor"
+        android:text="Best Sellet"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="170dp"
+        android:text="see more"
+        android:textColor="@color/orangeColor"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bestSeller"
+        app:layout_constraintTop_toBottomOf="@id/imageReclam"
+        tools:layout_editor_absoluteY="566dp"
+        tools:ignore="NotSibling" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recicleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bestSeller"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
